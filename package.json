@@ -1,0 +1,40 @@
+{
+  "name": "kenyan-news",
+  "version": "1.0.0",
+  "description": "sentiment analysis, kenyan news, kenya, text summarisation, three js, node js, mongodb atlas, mongoose",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sentiment",
+    "analysis",
+    "kenyan",
+    "news",
+    "kenya",
+    "text",
+    "summarisation",
+    "three",
+    "js",
+    "node",
+    "js",
+    "mongodb",
+    "atlas",
+    "mongoose"
+  ],
+  "author": "Wamaitha Nyamu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.11",
+    "nodemon": "^2.0.3",
+    "puppeteer": "^2.1.1",
+    "puppeteer-select": "^1.0.3",
+    "three": "^0.116.1"
+  }
+}
