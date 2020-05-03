@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>EVERYTHING</p>
+<div id="everythingInDb">
+    <div class="wrapperEverything">
+
+
+        <% allNewsData.forEach(function(a){%>
+            <div class="innerEverything">
+                <span class="theHashtag">#<%= a.url %>    </span>
+                <span class="theHashtag">#<%= a.summary %>    </span>
+                <span class="theHashtag">#<%= a.keywords %>    </span>
+                <span class="theHashtag">#<%= a.sentiment %>    </span>
+                <span class="theHashtag">#<%= a.fullText %>    </span>
+
+                </div>
+                <!-- <button  id="copy"class="copy" class="btnCopy">COPY TO CLIPBOARD</button> -->
+
+            </div>
+
+
+        <%})%>
+        </br>
+    </div>
+
+</body>
+</html>
