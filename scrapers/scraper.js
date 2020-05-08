@@ -3,19 +3,16 @@
 require("dotenv").config();
 //headless browser driver
 const puppeteer = require("puppeteer");
-//require mongoose - used for writing to mongodb in node js
-//----------------------------------------------------------------------------------------------
-
+;
 //initiate browser, open new page and go to url then return page
 async function getBrowser(){
     try{
         console.log("in get page");
      const browser = await puppeteer.launch({
             headless: true,
-            args: ['--no-sandbox',
-                '--disable-setuid-sandbox',
-
-            ]
+         args: ['--no-sandbox',
+             '--disable-setuid-sandbox',
+         ]
         });
 
     return browser

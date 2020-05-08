@@ -13,20 +13,26 @@ async function connectMongo(){
     });
     return connector;
 }
-async function getNameOfSchema(name){
-    return NEWS
-}
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
 //----------------------------------------------------------------------------------------------
-async function checkIfinDb(NEWS, link) {
+async function checkIfinDb(NEWS,newspaper, currentCounty, link) {
     console.log("checking if in db");
     await connectMongo();
     let query = {urls: link};
     let update = {
         $set: {
+            newspaper: newspaper,
+            county:currentCounty,
             urls: link,
         }
     };
+
+    await sleep(1000);
     let options = { upsert: true, returnOriginal:false };
 
     NEWS.findOneAndUpdate(query, update, options, (err, doc)=>{
@@ -35,6 +41,7 @@ async function checkIfinDb(NEWS, link) {
        }
 
        console.log(doc);
+
    });
 
 

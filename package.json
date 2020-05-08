@@ -2,10 +2,14 @@
   "name": "kenyan-news",
   "version": "1.0.0",
   "description": "sentiment analysis, kenyan news, kenya, text summarisation, three js, node js, mongodb atlas, mongoose",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./server.js",
+    "dev": "nodemon scrapers/standard/counties/Central.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 12.13.1",
+    "npm": ">= 6.12.1"
   },
   "keywords": [
     "sentiment",
@@ -34,7 +38,7 @@
     "mongoose": "^5.9.11",
     "nodemon": "^2.0.3",
     "puppeteer": "^2.1.1",
-    "puppeteer-select": "^1.0.3",
-    "three": "^0.116.1"
+    "puppeteer-select": "^1.0.3"
+
   }
 }

@@ -37,6 +37,6 @@ mongoose.connect(dbConfig.url, {
 
 require('./routes/news.routes')(app);
 // listen for requests
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log("Server is listening on port 3000");
 });

@@ -1,27 +1,76 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kenyan News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
 <body>
-<p>EVERYTHING</p>
-<div id="everythingInDb">
-    <div class="wrapperEverything">
 
+<div class="content">
 
-        <% allNewsData.forEach(function(a){%>
-            <div class="innerEverything">
-                <span class="theHashtag">#<%= a.url %>    </span>
-                <span class="theHashtag">#<%= a.summary %>    </span>
-                <span class="theHashtag">#<%= a.keywords %>    </span>
-                <span class="theHashtag">#<%= a.sentiment %>    </span>
-                <span class="theHashtag">#<%= a.fullText %>    </span>
+    <div class="explanationRight">
+        <fieldset>
+            <legend>About the project</legend>
+            <p>Hi, this project aims to show the quality of journalism in our media.
+                The project is divided in threes parts</p>
+            <ul>
+                <li>News links are scraped from the two most prominent newspaper publishers in Kenya;
+                    <a href="https://www.nation.co.ke/">Dailynation</a>
+                    and <a href="https://www.standardmedia.co.ke/">The standard</a>.</li>
+                <li>Each published article is parsed to get a summary and a sentiment. A sentiment can be
+                    negative, positive or neutral. A sentiment shows the tone or bias of the article published.</li>
 
-                </div>
-                <!-- <button  id="copy"class="copy" class="btnCopy">COPY TO CLIPBOARD</button> -->
-
-            </div>
-
-
-        <%})%>
-        </br>
+            </ul>
+            <p>Caveats:</p>
+            <p>The sentiments are highly dependent on the model used to train the data and as such the
+                visualisations may not represent the actual sentiment of an article. Feel free to check out the
+                code from my <a href="https://github.com/wamaithanyamu/kenyannews">Github</a>.</p>
+            <p>New links are added every 24 hours</p>
+            <p>If you have any questions you can find me at:
+            <a href="https://www.facebook.com/wamaithaNyams" target="blank" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/wamaithaNyamu" target="blank" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/wamaithanyamu/" target="blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </p>
+        </fieldset>
     </div>
 
+    <div class="iframe">
+<!--sentiment per day-->
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);"width="1000" height="550" src="https://charts.mongodb.com/charts-news-mjxyx/embed/charts?id=39daf778-f33b-4820-889d-a556526f563d&autorefresh=3600&theme=light"></iframe>
+    </div>
+    <div class="iframe">
+<!--        the standard sentiment per county-->
+        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79,.2);" width="1000" height="550" src="https://charts.mongodb.com/charts-news-mjxyx/embed/charts?id=ff071159-b08a-4173-b129-4b37fb3ce113&autorefresh=3600&theme=light"></iframe>
+    </div>
+    <div class="iframe">
+        <!--        daily nation sentiment per county-->
+ <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="1000" height="550" src="https://charts.mongodb.com/charts-news-mjxyx/embed/charts?id=56cd8ad0-c17b-47e3-ae12-e4fd96984e2a&autorefresh=3600&theme=light"></iframe>
+
+    </div>
+
+    <div class="iframe">
+        <!--        heat map-->
+        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="1000" height="550" src="https://charts.mongodb.com/charts-news-mjxyx/embed/charts?id=6977085b-56af-405c-8719-29f00c326989&autorefresh=3600&theme=light"></iframe>    </div>
+
+<div class="iframe">
+    <!--    aggregate-->
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);
+" width="1000" height="1000" src="https://charts.mongodb
+.com/charts-news-mjxyx/embed/charts?id=2694db0e-dce9-4cc0-b1e3-c6edc2b7ff0b&autorefresh=86400&theme=light"></iframe>
+</div>
+
+
+
+</div>
+
+
+<script src="/js/client.js"></script>
 </body>
 </html>
+
